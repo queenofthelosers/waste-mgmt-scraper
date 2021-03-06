@@ -12,7 +12,7 @@ elif n==2 :
     r = requests.get(url)
     htmlContent = r.content
     soup = BeautifulSoup(htmlContent, 'html.parser')
-    print(soup.prettify())
+    #print(soup.prettify())
     module_title = soup.find('div',{'class':'video-link-wrapper current-video'}).find('span',{'class':'video-name'})
     myDoc = docx.Document("notes.docx")
     myDoc.add_heading(module_title, 2)
